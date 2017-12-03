@@ -12,9 +12,9 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
   
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
-        <property name="url" value="jdbc:mysql://localhost:3306/learn"/> 
-        <property name="username" value="root"/> 
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/> 
+        <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=learn"/> 
+        <property name="username" value="sa"/> 
         <property name="password" value="1234"/> 
     </bean> 
     

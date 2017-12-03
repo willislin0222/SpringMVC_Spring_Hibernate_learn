@@ -15,7 +15,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
   	<tx:annotation-driven transaction-manager="transactionManager"  />
   
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:/comp/env/jdbc/learnmysql" />
+		<property name="jndiName" value="java:/comp/env/jdbc/learnmssql" />
 	</bean>
     
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" destroy-method="destroy"> 
