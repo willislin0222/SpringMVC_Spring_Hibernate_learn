@@ -29,10 +29,10 @@ public class RESNOGenerator implements IdentifierGenerator{
 		String prefix=sdate + "-RES";  //您要產生的自增主鍵字串
 		Connection con= session.connection(); //產生連線
 		try {
-			PreparedStatement pstmt = con.prepareStatement("select RES_seq.nextval from dual"); //從資料庫取的下一個SEQUENCE的值
+			PreparedStatement pstmt = con.prepareStatement("SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'learn' AND TABLE_NAME = 'reservation';"); //從資料庫取的下一個SEQUENCE的值
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()){
-				int no = rs.getInt("nextval"); //將此次的值放到no的變數中
+				int no = rs.getInt("AUTO_INCREMENT"); //將此次的值放到no的變數中
 				String code = prefix + StringUtils.leftPad("" + no, 8, '0');  //將變數code裡放入要產生的自訂自增主鍵(此範例為今天日期-RESXXXXXX)
 				return code; //回傳要產生的自增主鍵code
 			}

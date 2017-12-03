@@ -12,10 +12,10 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
   
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
-        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
-        <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/> 
-        <property name="username" value="learn"/> 
-        <property name="password" value="learn"/> 
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
+        <property name="url" value="jdbc:mysql://localhost:3306/learn"/> 
+        <property name="username" value="root"/> 
+        <property name="password" value="1234"/> 
     </bean> 
     
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" destroy-method="destroy"> 
@@ -28,7 +28,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
         </property> 
         <property name="hibernateProperties"> 
             <props> 
-                <prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop> 
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> 
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
                 <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>

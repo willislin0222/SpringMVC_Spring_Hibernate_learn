@@ -6,7 +6,7 @@
     <class name="com.reservation.model.ReservationVO" table="reservation" >
         
         <id name="res_no" column="res_no">
-            <generator class="com.reservation.model.RESNOGenerator" />            
+            <generator class="native" />            
         </id>
         
         <many-to-one name="memberVO" class="com.member.model.MemberVO" lazy="false">

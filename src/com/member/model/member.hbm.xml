@@ -6,7 +6,7 @@
     <class name="com.member.model.MemberVO" table="member" >
         
         <id name="mem_no" column="mem_no">
-            <generator class="com.member.model.MEMNOGenerator" />            
+            <generator class="native" />            
         </id>
         
         <property name="mem_name" column="mem_name" />
