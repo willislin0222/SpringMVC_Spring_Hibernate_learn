@@ -41,7 +41,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 	
 	
 	/*
-	 * Spring3.1¶}©l¤ä´©-¤èªk¯Å§OÅçÃÒ (JSR-349 Bean Validation 1.1)
+	 * Spring3.1é–‹å§‹æ”¯æ´-æ–¹æ³•ç´šåˆ¥é©—è­‰ (JSR-349 Bean Validation 1.1)
 	 */
 	@Bean
 	public MethodValidationPostProcessor methodValidationPostProcessor() {

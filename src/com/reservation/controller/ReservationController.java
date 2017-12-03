@@ -27,7 +27,7 @@ public class ReservationController {
 	 * This method will serve as addEmp.jsp handler.
 	 */
 	@RequestMapping(method = RequestMethod.GET, value = "addReservation")
-	public String addEmp(ModelMap model) {
+	public String addReservation(ModelMap model) {
 		ReservationVO reservationVO = new ReservationVO();
 		model.addAttribute("reservationVO", reservationVO);
 		return "reservation/addReservation";
